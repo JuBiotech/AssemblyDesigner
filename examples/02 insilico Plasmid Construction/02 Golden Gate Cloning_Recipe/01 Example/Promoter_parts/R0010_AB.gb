@@ -1,0 +1,69 @@
+LOCUS       R0010_AB                2308 bp    DNA     circular SYN 18-SEP-2025
+DEFINITION  synthetic circular DNA
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2308)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Sep 18, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+COMMENT     MoClo Basic Part: Controllable promoter - pLacI - lacI regulated
+            (repressed by LacI+CAP. LacI, C0012, inhibited by IPTG) [A:R0010:B]
+FEATURES             Location/Qualifiers
+     source          1..2308
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     promoter        5..204
+                     /label=R0010
+     promoter        141..171
+                     /label=lac promoter
+     misc_binding    175..197
+                     /label=LacO
+     misc_feature    209..2308
+                     /label=DVLA
+     CDS             complement(1172..2032)
+                     /label=bla
+ORIGIN
+        1 ggagcaatac gcaaaccgcc tctccccgcg cgttggccga ttcattaatg cagctggcac
+       61 gacaggtttc ccgactggaa agcgggcagt gagcgcaacg caattaatgt gagttagctc
+      121 actcattagg caccccaggc tttacacttt atgcttccgg ctcgtatgtt gtgtggaatt
+      181 gtgagcggat aacaatttca cacatactag agacctacta gtagcggccg ctgcaggctt
+      241 cctcgctcac tgactcgctg cgctcggtcg ttcggctgcg gcgagcggta tcagctcact
+      301 caaaggcggt aatacggtta tccacagaat caggggataa cgcaggaaag aacatgtgag
+      361 caaaaggcca gcaaaaggcc aggaaccgta aaaaggccgc gttgctggcg tttttccaca
+      421 ggctccgccc ccctgacgag catcacaaaa atcgacgctc aagtcagagg tggcgaaacc
+      481 cgacaggact ataaagatac caggcgtttc cccctggaag ctccctcgtg cgctctcctg
+      541 ttccgaccct gccgcttacc ggatacctgt ccgcctttct cccttcggga agcgtggcgc
+      601 tttctcatag ctcacgctgt aggtatctca gttcggtgta ggtcgttcgc tccaagctgg
+      661 gctgtgtgca cgaacccccc gttcagcccg accgctgcgc cttatccggt aactatcgtc
+      721 ttgagtccaa cccggtaaga cacgacttat cgccactggc agcagccact ggtaacagga
+      781 ttagcagagc gaggtatgta ggcggtgcta cagagttctt gaagtggtgg cctaactacg
+      841 gctacactag aagaacagta tttggtatct gcgctctgct gaagccagtt accttcggaa
+      901 aaagagttgg tagctcttga tccggcaaac aaaccaccgc tggtagcggt ggtttttttg
+      961 tttgcaagca gcagattacg cgcagaaaaa aaggatctca agaagatcct ttgatctttt
+     1021 ctacggggtc tgacgctcag tggaacgaaa actcacgtta agggattttg gtcatgagat
+     1081 tatcaaaaag gatcttcacc tagatccttt taaattaaaa atgaagtttt aaatcaatct
+     1141 aaagtatata tgagtaaact tggtctgaca gttaccaatg cttaatcagt gaggcaccta
+     1201 tctcagcgat ctgtctattt cgttcatcca tagttgcctg actccccgtc gtgtagataa
+     1261 ctacgatacg ggagggctta ccatctggcc ccagtgctgc aatgataccg cgcgacccac
+     1321 gctcaccggc tccagattta tcagcaataa accagccagc cggaagggcc gagcgcagaa
+     1381 gtggtcctgc aactttatcc gcctccatcc agtctattaa ttgttgccgg gaagctagag
+     1441 taagtagttc gccagttaat agtttgcgca acgttgttgc cattgctaca ggcatcgtgg
+     1501 tgtcacgctc gtcgtttggt atggcttcat tcagctccgg ttcccaacga tcaaggcgag
+     1561 ttacatgatc ccccatgttg tgcaaaaaag cggttagctc cttcggtcct ccgatcgttg
+     1621 tcagaagtaa gttggccgca gtgttatcac tcatggttat ggcagcactg cataattctc
+     1681 ttactgtcat gccatccgta agatgctttt ctgtgactgg tgagtactca accaagtcat
+     1741 tctgagaata gtgtatgcgg cgaccgagtt gctcttgccc ggcgtcaata cgggataata
+     1801 ccgcgccaca tagcagaact ttaaaagtgc tcatcattgg aaaacgttct tcggggcgaa
+     1861 aactctcaag gatcttaccg ctgttgagat ccagttcgat gtaacccact cgtgcaccca
+     1921 actgatcttc agcatctttt actttcacca gcgtttctgg gtgagcaaaa acaggaaggc
+     1981 aaaatgccgc aaaaaaggga ataagggcga cacggaaatg ttgaatactc atactcttcc
+     2041 tttttcaata ttattgaagc atttatcagg gttattgtct catgagcgga tacatatttg
+     2101 aatgtattta gaaaaataaa caaatagggg ttccgcgcac atttccccga aaagtgccac
+     2161 ctgacgtcta agaaaccatt attatcatga cattaaccta taaaaatagg cgtatcacga
+     2221 ggcagaattt cagataaaaa aaatccttag ctttcgctaa ggatgatttc tggaattcgc
+     2281 ggccgcttct agagactagt gggtctca
+//

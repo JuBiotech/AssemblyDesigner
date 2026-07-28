@@ -1,0 +1,135 @@
+# =========================================================
+# Python + Visual Studio Code + Project specific ignores
+# =========================================================
+
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-wheel-metadata/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3*
+# Flask
+instance/
+.webassets-cache
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# pyenv / pipenv / PEP 582
+# .python-version
+# Pipfile.lock
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+.ionide
+!.vscode/*.code-snippets
+.idea/
+
+### Pre-commit ###
+.pre-commit-config.yaml~
+*.rej
+*.orig
+
+### Linters ###
+.ruff_cache/
+
+### OS noise ###
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+### Project specific ###
+# (Leave blank if nothing specific)
+
+### Opentrons Flex Protocols ###
+examples/01 Liquid Handling/Gibson Cloning/Opentrons_Flex_Protocol_Gibson_assembly_designer.py
+examples/01 Liquid Handling/Combinational PCR/Opentrons_Flex_Protocol_PCR_designer.py
+examples/01 Liquid Handling/Golden Gate Cloning/3G_Example/Opentrons_Flex_Protocol_MoClo_assembly_designer.py
+examples/01 Liquid Handling/Golden Gate Cloning/Basic_Example/Opentrons_Flex_Protocol_MoClo_assembly_designer.py
+examples/01 Liquid Handling/Golden Gate Cloning/High_Throughput_Example/Opentrons_Flex_Protocol_MoClo_assembly_designer.py

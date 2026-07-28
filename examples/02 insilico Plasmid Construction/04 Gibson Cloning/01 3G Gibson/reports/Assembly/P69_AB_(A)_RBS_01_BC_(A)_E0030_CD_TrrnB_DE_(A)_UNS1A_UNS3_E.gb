@@ -1,0 +1,105 @@
+LOCUS       P69_AB_(A)_RBS_01_BC    1150 bp    DNA     circular UNK 01-JAN-1980
+DEFINITION  .
+ACCESSION   P69_AB_(A)_RBS_01_BC
+VERSION     P69_AB_(A)_RBS_01_BC
+KEYWORDS    .
+SOURCE
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     homology        1..4
+                     /label="AATG"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     CDS             5..727
+                     /label="E0030"
+                     /ApEinfo_revcolor="#faac61"
+                     /ApEinfo_fwdcolor="#faac61"
+     homology        728..731
+                     /label="AGGT"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     terminator      762..964
+                     /note="TrrnB terminator from E. coli rrnB gene.
+                     (10.1111/j.1432-1033.1991.tb16326.x)"
+                     /note="color: #cc0000"
+                     /label="TrrnB"
+     misc_feature    937..964
+                     /label="T2"
+                     /note="color: #cc0000"
+     gene            762..805
+                     /gene="T1"
+                     /label="T1"
+                     /note="color: #cc0000"
+     misc_feature    732..761
+                     /label="Spacer"
+                     /note="color: #993300"
+     misc_feature    732..964
+                     /source="TrrnB_DE_(A)"
+                     /indicates_part="True"
+                     /note="From TrrnB_DE_(A)"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+     homology        965..968
+                     /label="GCTT"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     misc_feature    969..1048
+                     /source="UNS1A_UNS3_E"
+                     /indicates_part="True"
+                     /note="From UNS1A_UNS3_E"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+     homology        1049..1052
+                     /label="GGAG"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     promoter        1053..1112
+                     /label="P69"
+                     /note="color: #ffcc99"
+     homology        1113..1116
+                     /label="TACT"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     RBS             1137..1145
+                     /note="C. glutamicum RBS consensus motif GAAAGGAGG
+                     (10.1186/1471-2164-14-888)"
+                     /note="color: #993366"
+                     /label="RBS_01"
+     misc_feature    1117..1136
+                     /label="Spacer"
+                     /note="color: #cf6ea2"
+     misc_feature    1146..1150
+                     /note="5 nt spacer. Taken together with the AATG fusion
+                     site (C), an optimal spacer of 6 nucleotides is created.
+                     (10.1186/1471-2164-14-888)"
+                     /note="color: #ff99cc"
+                     /label="Spacer"
+     misc_feature    1117..1150
+                     /source="RBS_01_BC_(A)"
+                     /indicates_part="True"
+                     /note="From RBS_01_BC_(A)"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+ORIGIN
+        1 aatgatggtg agcaagggcg aggagctgtt caccggggtg gtgcccatcc tggtcgagct
+       61 ggacggcgac gtaaacggcc acaagttcag cgtgtccggc gagggcgagg gcgatgccac
+      121 ctacggcaag ctgaccctga agttcatctg caccaccggc aagctgcccg tgccctggcc
+      181 caccctcgtg accaccttcg gctacggcct gcaatgcttc gcccgctacc ccgaccacat
+      241 gaagctgcac gacttcttca agtccgccat gcccgaaggc tacgtccagg agcgcaccat
+      301 cttcttcaag gacgacggca actacaagac ccgcgccgag gtgaagttcg agggcgacac
+      361 cctggtgaac cgcatcgagc tgaagggcat cgacttcaag gaggacggca acatcctggg
+      421 gcacaagctg gagtacaact acaacagcca caacgtctat atcatggccg acaagcagaa
+      481 gaacggcatc aaggtgaact tcaagatccg ccacaacatc gaggacggca gcgtgcagct
+      541 cgccgaccac taccagcaga acacccccat cggcgacggc cccgtgctgc tgcccgacaa
+      601 ccactacctg agctaccagt ccgccctgag caaagacccc aacgagaagc gcgatcacat
+      661 ggtcctgctg gagttcgtga ccgccgccgg gatcactctc ggcatggacg agctgtacaa
+      721 gtaataaagg tatgcgagag tagggaactg ccaggcatca aataaaacga aaggctcagt
+      781 cgaaagactg ggcctttcgt tttatctgtt gtttgtcggt gaacgctctc ctgagtagga
+      841 caaatccgcc gggagcggat ttgaacgttg cgaagcaacg gcccggaggg tggcgggcag
+      901 gacgcccgcc ataaactgcc aggcatcaaa ttaagcagaa ggccatcctg acggatggcc
+      961 ttttgcttgc actgaaggtc ctcaatcgca ctggaaacat caaggtcgca ttactcgcat
+     1021 ccattctcag gctgtctcgt ctcgtctcgg agaaaattat tttaaatttt ccgttgacaa
+     1081 gacaatgcgc atgagatata atggcatagt gctacttgtg agccgctact cgatgagaaa
+     1141 ggaggtacta
+//

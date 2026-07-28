@@ -1,0 +1,72 @@
+LOCUS       C1__pEVmC_K_AE__P45_    2217 bp    DNA              UNK 01-JAN-1980
+DEFINITION
+            C1__pEVmC_K_AE__P45_AB_A_RBS_01_BC_A_E0030_CD_TrrnB_DE_A_UNS1A_UNS3_E__P69_AB_A_RBS_01_BC_A_E0040m_CD_TrrnB_DE_A_UNS3A_UNS10E
+            (Gibson assembly).
+ACCESSION   C1__pEVmC_K_AE__P45_
+VERSION     C1__pEVmC_K_AE__P45_
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..39
+                     /label="left_overhang"
+                     /note="PCR overhang"
+     misc_feature    complement(527..1115)
+                     /note="OriE.c.:ColE1 from pUC18
+                     (https://doi.org/10.1016/j.plasmid.2020.102540)
+                     ColE1/pMB1/pBR322/pUC origin of replication (15-20 copies)
+                     Compatible with plasmids containing the medium-copy p15A
+                     origin of replication."
+                     /note="color: #808080"
+                     /label="Ori Ec (ColE1)"
+     CDS             1348..2163
+                     /codon_start=1
+                     /product="Kanamycin resistance"
+                     /transl_table=1
+                     /translation="MSHIQRETSCSRPRLNSNMDADLYGYKWARDNVGQSGATIYRLYG
+                     KPDAPELFLKHGKGSVANDVTDEMVRLNWLTEFMPLPTIKHFIRTPDDAWLLTTAIPGK
+                     TAFQVLEEYPDSGENIVDALAVFLRRLHSIPVCNCPFNSDRVFRLAQAQSRMNNGLVDA
+                     SDFDDERNGWPVEQVWKEMHKLLPFSPDSVVTHGDFSLDNLIFDEGKLIGCIDVGRVGI
+                     ADRYQDLAILWNCLGEFSPSLQKRLFQKYGIDNPDMNKLQFHLMLDEFF*"
+                     /label="KanR"
+                     /note="color: #ff9900"
+ORIGIN
+        1 ccaggataca tagattacca caactccgag cccttccacc tactagtagc ggccgctgca
+       61 gtccggcaaa aaagggcaag gtgtcaccca gaaacgctgg tgaaagtaaa agatgctgaa
+      121 gatcagttgg gtgcacgagt gggttacatc gaactggatc tcaacagcgg taagatcctt
+      181 gagagttttc gccccgaaga acgttttcca atgatgagca cttttaaagt tctgctatgt
+      241 ggcgcggtat tatcccgtgt tgacgccggg caagagcaac tcggtcgccg catacactat
+      301 tctcagaatg acttggttga gtaattcgta atcatgtcat aggctcttcc gcttcctcgc
+      361 tcactgactc gctgcgctcg gtcgttcggc tgcggcgagc ggtatcagct cactcaaagg
+      421 cggtaatacg gttatccaca gaatcagggg ataacgcagg aaagaacatg tgagcaaaag
+      481 gccagcaaaa ggccaggaac cgtaaaaagg ccgcgttgct ggcgtttttc cataggctcc
+      541 gcccccctga cgagcatcac aaaaatcgac gctcaagtca gaggtggcga aacccgacag
+      601 gactataaag ataccaggcg tttccccctg gaagctccct cgtgcgctct cctgttccga
+      661 ccctgccgct taccggatac ctgtccgcct ttctcccttc gggaagcgtg gcgctttctc
+      721 atagctcacg ctgtaggtat ctcagttcgg tgtaggtcgt tcgctccaag ctgggctgtg
+      781 tgcacgaacc ccccgttcag cccgaccgct gcgccttatc cggtaactat cgtcttgagt
+      841 ccaacccggt aagacacgac ttatcgccac tggcagcagc cactggtaac aggattagca
+      901 gagcgaggta tgtaggcggt gctacagagt tcttgaagtg gtggcctaac tacggctaca
+      961 ctagaagaac agtatttggt atctgcgctc tgctgaagcc agttaccttc ggaaaaagag
+     1021 ttggtagctc ttgatccggc aaacaaacca ccgctggtag cggtggtttt tttgtttgca
+     1081 agcagcagat tacgcgcaga aaaaaaggat ctcaagaaga tcctttgatc ttttctacgg
+     1141 ggtctgacgc tcagtggaac gaaaactcac gttaagggat tttggtcatg agattatcaa
+     1201 aaaggatctt cacctagatc cttttggggg gggggggaaa gccacgttgt gtctcaaaat
+     1261 ctctgatgtt acattgcaca agataaaaat atatcatcat gaacaataaa actgtctgct
+     1321 tacataaaca gtaatacaag gggtgttatg agccatattc aacgggaaac gtcttgctcg
+     1381 aggccgcgat taaattccaa catggatgct gatttatatg ggtataaatg ggctcgcgat
+     1441 aatgtcgggc aatcaggtgc gacaatctat cgattgtatg ggaagcccga tgcgccagag
+     1501 ttgtttctga aacatggcaa aggtagcgtt gccaatgatg ttacagatga gatggtcaga
+     1561 ctaaactggc tgacggaatt tatgcctctt cctaccatca agcattttat ccgtactcct
+     1621 gatgatgcat ggttactcac cactgcgatc cccgggaaaa cagcattcca ggtattagaa
+     1681 gaatatcctg attcaggtga aaatattgtt gatgcgctgg cagtgttcct gcgccggttg
+     1741 cattcgattc ctgtttgtaa ttgtcctttt aacagcgatc gcgtatttcg tctcgctcag
+     1801 gcgcaatcac gaatgaataa cggtttggtt gatgcgagtg attttgatga cgagcgtaat
+     1861 ggctggcctg ttgaacaagt ctggaaagaa atgcataagc ttttgccatt ctcaccggat
+     1921 tcagtcgtca ctcatggtga tttctcactt gataacctta tttttgacga ggggaaatta
+     1981 ataggttgta ttgatgttgg acgagtcgga atcgcagacc gataccagga tcttgccatc
+     2041 ctatggaact gcctcggtga gttttctcct tcattacaga aacggctttt tcaaaaatat
+     2101 ggtattgata atcctgatat gaataaattg cagtttcatt tgatgctcga tgagtttttc
+     2161 taatcagaat tggttaattg gttgtaacac tggcagagca ttacgctgac ttgacgg
+//

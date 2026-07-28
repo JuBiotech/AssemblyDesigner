@@ -1,0 +1,126 @@
+LOCUS       PH36_RBS_01_GFP_CD_T    1227 bp    DNA     circular UNK 01-JAN-1980
+DEFINITION  .
+ACCESSION   PH36_RBS_01_GFP_CD_T
+VERSION     PH36_RBS_01_GFP_CD_T
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     homology        1..4
+                     /label="AATG"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     CDS             5..724
+                     /codon_start=1
+                     /label="E0040m"
+                     /transl_table=1
+                     /note="color: #faac61"
+     misc_feature    5..724
+                     /source="GFP_CD"
+                     /indicates_part=True
+                     /note="From GFP_CD"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+     homology        725..728
+                     /label="AGGT"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     terminator      759..961
+                     /note="TrrnB terminator from E. coli rrnB gene.
+                     (10.1111/j.1432-1033.1991.tb16326.x)"
+                     /note="color: #cc0000"
+                     /label="TrrnB"
+     misc_feature    934..961
+                     /label="T2"
+                     /note="color: #cc0000"
+     gene            759..802
+                     /gene="T1"
+                     /label="T1"
+                     /note="color: #cc0000"
+     misc_feature    729..758
+                     /label="Spacer"
+                     /note="color: #993300"
+     misc_feature    729..961
+                     /source="TrrnB"
+                     /indicates_part=True
+                     /note="From TrrnB"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+     homology        962..965
+                     /label="GCTT"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     gap             1006..1056
+                     /estimated_length=51
+                     /label="Random BB (Not real)"
+                     /note="color: #dcdcdc"
+     misc_feature    966..1096
+                     /source="UNS1_UNS4_BB"
+                     /indicates_part=True
+                     /note="From UNS1_UNS4_BB"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+     homology        1097..1100
+                     /label="GGAG"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     promoter        1101..1189
+                     /label="PH36"
+                     /note="color: #ffcc99"
+     misc_feature    1101..1189
+                     /source="PH36"
+                     /indicates_part=True
+                     /note="From PH36"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+     homology        1190..1193
+                     /label="TACT"
+                     /color="#f7e8f7"
+                     /ApEinfo_fwdcolor="#f7e8f7"
+     RBS             1214..1222
+                     /note="C. glutamicum RBS consensus motif GAAAGGAGG
+                     (10.1186/1471-2164-14-888)"
+                     /note="color: #993366"
+                     /label="RBS_01"
+     misc_feature    1194..1213
+                     /label="Spacer"
+                     /note="color: #cf6ea2"
+     misc_feature    1223..1227
+                     /note="5 nt spacer. Taken together with the AATG fusion
+                     site (C), an optimal spacer of 6 nucleotides is created.
+                     (10.1186/1471-2164-14-888)"
+                     /note="color: #ff99cc"
+                     /label="Spacer"
+     5'UTR           1194..1227
+                     /label="5'UTR"
+                     /note="color: #ff99cc"
+     misc_feature    1194..1227
+                     /source="RBS_01"
+                     /indicates_part=True
+                     /note="From RBS_01"
+                     /color="white"
+                     /ApEinfo_fwdcolor="white"
+ORIGIN
+        1 aatgatgcgt aaaggagaag aacttttcac tggagttgtc ccaattcttg ttgaattaga
+       61 tggtgatgtt aatgggcaca aattttctgt cagtggagag ggtgaaggtg atgcaacata
+      121 cggaaaactt acccttaaat ttatttgcac tactggaaaa ctacctgttc catggccaac
+      181 acttgtcact actttcggtt atggtgttca atgctttgcg agatacccag atcatatgaa
+      241 acagcatgac tttttcaaga gtgccatgcc cgaaggttat gtacaggaaa gaactatatt
+      301 tttcaaagat gacgggaact acaagacacg tgctgaagtc aagtttgaag gtgataccct
+      361 tgttaataga atcgagttaa aaggtattga ttttaaagaa gatggaaaca ttcttggaca
+      421 caaattggaa tacaactata actcacacaa tgtatacatc atggcagaca aacaaaagaa
+      481 tggaatcaaa gttaacttca aaattagaca caacattgaa gatggaagcg ttcaactagc
+      541 agaccattat caacaaaata ctccaattgg cgatggccct gtccttttac cagacaacca
+      601 ttacctgtcc acacaatctg ccctttcgaa agatcccaac gaaaagagag atcacatggt
+      661 ccttcttgag tttgtaacag ctgctgggat tacacatggc atggatgaac tatacaaata
+      721 ataaaggtat gcgagagtag ggaactgcca ggcatcaaat aaaacgaaag gctcagtcga
+      781 aagactgggc ctttcgtttt atctgttgtt tgtcggtgaa cgctctcctg agtaggacaa
+      841 atccgccggg agcggatttg aacgttgcga agcaacggcc cggagggtgg cgggcaggac
+      901 gcccgccata aactgccagg catcaaatta agcagaaggc catcctgacg gatggccttt
+      961 tgcttctgac ctcctgccag caatagtaag acaacacgca aagtcnnnnn nnnnnnnnnn
+     1021 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnncatt actcgcatcc attctcaggc
+     1081 tgtctcgtct cgtctcggag caaaagctgg gtacctctat ctggtgccct aaacggggga
+     1141 atattaacgg gcccagggtg gtcgcacctt ggttggtagg agtagcatgt acttgtgagc
+     1201 cgctactcga tgagaaagga ggtacta
+//

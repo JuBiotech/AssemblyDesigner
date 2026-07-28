@@ -1,0 +1,11 @@
+Source_Worklist,Well Nr. source plate,Well Nr. destination plate,Part,Volumen
+Worklist_Template,A1,A1,Template 1,5.0
+Worklist_Template,B1,B1,Template 2,5.0
+Worklist_MM,A3,A1,Mastermix1,40.0
+Worklist_MM,A3,B1,Mastermix1,40.0
+Worklist_PCR_Primer,A1,A1,UNS1_fwd und UNS4_rev,5.0
+Worklist_PCR_Primer,B1,B1,UNS4_fwd und UNS10_rev,5.0
+Worklist_Primer1,A1,A1,UNS1_fwd,10.0
+Worklist_Primer1,C1,B1,UNS4_fwd,10.0
+Worklist_Primer2,B1,A1,UNS4_rev,10.0
+Worklist_Primer2,D1,B1,UNS10_rev,10.0

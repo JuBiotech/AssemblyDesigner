@@ -1,0 +1,63 @@
+LOCUS       B0015_DF                2237 bp    DNA     circular SYN 30-MAR-2015
+DEFINITION  synthetic circular DNA
+ACCESSION   B0015_DF
+VERSION     B0015_DF
+KEYWORDS    B0015_DF
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2237)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Sep 18, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+COMMENT     MoClo Basic Part: Double terminator (B0010:B0012)  [D:B0015:F]
+FEATURES             Location/Qualifiers
+     source          1..2237
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     misc_feature    5..133
+                     /label=B0015
+     misc_feature    138..2237
+                     /label=DVLA
+     CDS             complement(1101..1961)
+                     /label=bla
+ORIGIN
+        1 aggtccaggc atcaaataaa acgaaaggct cagtcgaaag actgggcctt tcgttttatc
+       61 tgttgtttgt cggtgaacgc tctctactag agtcacactg gctcaccttc gggtgggcct
+      121 ttctgcgttt atacgctaga gacctactag tagcggccgc tgcaggcttc ctcgctcact
+      181 gactcgctgc gctcggtcgt tcggctgcgg cgagcggtat cagctcactc aaaggcggta
+      241 atacggttat ccacagaatc aggggataac gcaggaaaga acatgtgagc aaaaggccag
+      301 caaaaggcca ggaaccgtaa aaaggccgcg ttgctggcgt ttttccacag gctccgcccc
+      361 cctgacgagc atcacaaaaa tcgacgctca agtcagaggt ggcgaaaccc gacaggacta
+      421 taaagatacc aggcgtttcc ccctggaagc tccctcgtgc gctctcctgt tccgaccctg
+      481 ccgcttaccg gatacctgtc cgcctttctc ccttcgggaa gcgtggcgct ttctcatagc
+      541 tcacgctgta ggtatctcag ttcggtgtag gtcgttcgct ccaagctggg ctgtgtgcac
+      601 gaaccccccg ttcagcccga ccgctgcgcc ttatccggta actatcgtct tgagtccaac
+      661 ccggtaagac acgacttatc gccactggca gcagccactg gtaacaggat tagcagagcg
+      721 aggtatgtag gcggtgctac agagttcttg aagtggtggc ctaactacgg ctacactaga
+      781 agaacagtat ttggtatctg cgctctgctg aagccagtta ccttcggaaa aagagttggt
+      841 agctcttgat ccggcaaaca aaccaccgct ggtagcggtg gtttttttgt ttgcaagcag
+      901 cagattacgc gcagaaaaaa aggatctcaa gaagatcctt tgatcttttc tacggggtct
+      961 gacgctcagt ggaacgaaaa ctcacgttaa gggattttgg tcatgagatt atcaaaaagg
+     1021 atcttcacct agatcctttt aaattaaaaa tgaagtttta aatcaatcta aagtatatat
+     1081 gagtaaactt ggtctgacag ttaccaatgc ttaatcagtg aggcacctat ctcagcgatc
+     1141 tgtctatttc gttcatccat agttgcctga ctccccgtcg tgtagataac tacgatacgg
+     1201 gagggcttac catctggccc cagtgctgca atgataccgc gcgacccacg ctcaccggct
+     1261 ccagatttat cagcaataaa ccagccagcc ggaagggccg agcgcagaag tggtcctgca
+     1321 actttatccg cctccatcca gtctattaat tgttgccggg aagctagagt aagtagttcg
+     1381 ccagttaata gtttgcgcaa cgttgttgcc attgctacag gcatcgtggt gtcacgctcg
+     1441 tcgtttggta tggcttcatt cagctccggt tcccaacgat caaggcgagt tacatgatcc
+     1501 cccatgttgt gcaaaaaagc ggttagctcc ttcggtcctc cgatcgttgt cagaagtaag
+     1561 ttggccgcag tgttatcact catggttatg gcagcactgc ataattctct tactgtcatg
+     1621 ccatccgtaa gatgcttttc tgtgactggt gagtactcaa ccaagtcatt ctgagaatag
+     1681 tgtatgcggc gaccgagttg ctcttgcccg gcgtcaatac gggataatac cgcgccacat
+     1741 agcagaactt taaaagtgct catcattgga aaacgttctt cggggcgaaa actctcaagg
+     1801 atcttaccgc tgttgagatc cagttcgatg taacccactc gtgcacccaa ctgatcttca
+     1861 gcatctttta ctttcaccag cgtttctggg tgagcaaaaa caggaaggca aaatgccgca
+     1921 aaaaagggaa taagggcgac acggaaatgt tgaatactca tactcttcct ttttcaatat
+     1981 tattgaagca tttatcaggg ttattgtctc atgagcggat acatatttga atgtatttag
+     2041 aaaaataaac aaataggggt tccgcgcaca tttccccgaa aagtgccacc tgacgtctaa
+     2101 gaaaccatta ttatcatgac attaacctat aaaaataggc gtatcacgag gcagaatttc
+     2161 agataaaaaa aatccttagc tttcgctaag gatgatttct ggaattcgcg gccgcttcta
+     2221 gagactagtg ggtctca
+//

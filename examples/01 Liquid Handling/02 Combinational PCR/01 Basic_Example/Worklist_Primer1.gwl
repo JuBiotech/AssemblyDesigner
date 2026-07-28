@@ -1,0 +1,7 @@
+C;transfer Primer1
+A;Primer_stocks[001];;;1;;10.00;;;;
+D;mtp_source[001];;;1;;10.00;;;;
+W1;
+A;Primer_stocks[001];;;3;;10.00;;;;
+D;mtp_source[001];;;2;;10.00;;;;
+W1;

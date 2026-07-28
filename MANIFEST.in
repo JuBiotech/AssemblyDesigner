@@ -1,0 +1,22 @@
+# ship license & readme
+include LICENSE
+include README.md
+
+# include only package sources & typing marker
+recursive-include assembly_designer *.py *.pyi *.typed
+
+# never package these trees
+prune examples
+prune reports
+prune docs
+prune build
+prune dist
+prune tests
+prune .github
+prune .gitlab
+prune .idea
+
+# drop junk & large artifacts anywhere in the tree
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.zip *.gb *.gbk *.dna *.png *.svg *.gif *.pdf *.ipynb
