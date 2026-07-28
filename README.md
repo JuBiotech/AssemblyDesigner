@@ -28,8 +28,8 @@ pip install -e ".[insilico]"
 - [Features](#features)
 - [Example Notebooks](#example-notebooks)
 - [How It Works](#how-it-works)
-- [Plasmidio (in‑silico) Quickstart](#plasmidio-in-silico-quickstart)
-- [3‑G Pipeline](#3-g-pipeline)
+- [Plasmidio (in-silico) Quickstart](#plasmidio-in-silico-quickstart)
+- [3-G Pipeline](#3-g-pipeline)
 - [Installation](#installation)
 - [Contributing](#contributing)
 
@@ -95,7 +95,7 @@ This repository includes several Jupyter notebooks demonstrating the workflows:
 
 ---
 
-## 🧬 Plasmidio (in‑silico) Quickstart
+## 🧬 Plasmidio (in-silico) Quickstart
 
 ```python
 from pathlib import Path
@@ -125,6 +125,10 @@ for gb in gb_paths:
     remove_near_duplicate_features(gb, tolerance=3)
 ```
 
+---
+
+## 🧵 3-G Pipeline
+
 ```python
 from assembly_designer.plasmidio import run_3g_batch_safe, build_histories_for_all_constructs
 
@@ -150,7 +154,9 @@ histories = build_histories_for_all_constructs(
 ```
 
 
-# Contributing & development installation
+---
+
+## 📥 Installation
 
 ### 1. Clone the repository
 GitHub repository: [JuBiotech/AssemblyDesigner](https://github.com/JuBiotech/AssemblyDesigner)
@@ -183,13 +189,7 @@ pip install uv
 uv pip install -e ".[dev]"
 ```
 
-### 5. Install and enable pre-commit hooks
-```bash
-pip install pre-commit
-pre-commit install
-```
-
-### 6. Install in-silico functions (DnaCauldron + SnapGene)
+### 5. Install in-silico functions (DnaCauldron + SnapGene)
 ###    Requires Git (for the snapgene_reader dependency)
 ```bash
 uv pip install "assembly_designer[insilico]"
@@ -198,6 +198,17 @@ uv pip install "assembly_designer[insilico]"
 ### or:
 ```bash
 uv pip install -e ".[insilico]"
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome. Please install and enable the pre-commit hooks and run the test suite before opening a pull request.
+
+```bash
+pip install pre-commit
+pre-commit install
 ```
 
 # 📦 Supported File Formats
