@@ -36,7 +36,7 @@ pip install -e ".[insilico]"
 
 ---
 
-## 🧩 Overview
+## Overview
 `AssemblyDesigner` was developed for **biofoundries** to rapidly generate **liquid-handling worklists** for high-throughput plasmid assembly.
 The goal is to enable efficient construction of plasmids for **protein overexpression** and **genomic modifications** in a scalable and automated way.
 
@@ -60,7 +60,7 @@ It substitutes **time-consuming in-silico tasks** that would otherwise distract 
 
 ---
 
-## ✨ Features
+## Features
 - **Worklist generation** for Opentrons & Tecan platforms
 - **Simulation** of liquid-handling steps (volumes, mixes, transfers)
 - **Plasmidio** (in‑silico):
@@ -72,7 +72,7 @@ It substitutes **time-consuming in-silico tasks** that would otherwise distract 
 
 ---
 
-## 📓 Example Notebooks
+## Example Notebooks
 This repository includes several Jupyter notebooks demonstrating the workflows:
 
 - **GelSim_example.ipynb** → Example simulation of pipetting workflows
@@ -85,7 +85,7 @@ This repository includes several Jupyter notebooks demonstrating the workflows:
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 1. **Fill Excel template** with design parameters (sources, volumes, mappings).
 2. **Simulate** the pipetting steps to validate your plan.
 3. **Generate worklists** for robot execution.
@@ -95,7 +95,7 @@ This repository includes several Jupyter notebooks demonstrating the workflows:
 
 ---
 
-## 🧬 Plasmidio (in-silico) Quickstart
+## Plasmidio (in-silico) Quickstart
 
 ```python
 from pathlib import Path
@@ -127,7 +127,7 @@ for gb in gb_paths:
 
 ---
 
-## 🧵 3-G Pipeline
+## 3-G Pipeline
 
 ```python
 from assembly_designer.plasmidio import run_3g_batch_safe, build_histories_for_all_constructs
@@ -156,7 +156,7 @@ histories = build_histories_for_all_constructs(
 
 ---
 
-## 📥 Installation
+## Installation
 
 ### 1. Clone the repository
 GitHub repository: [JuBiotech/AssemblyDesigner](https://github.com/JuBiotech/AssemblyDesigner)
@@ -202,7 +202,7 @@ uv pip install -e ".[insilico]"
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome. Please install and enable the pre-commit hooks and run the test suite before opening a pull request.
 
@@ -246,3 +246,9 @@ This toolkit sticks to common, well-documented formats so you can slot it into e
   Contains HTML/CSV summaries and GenBank exports; unpacked to `reports/Assembly/`.
 - **QC tables**: `.csv`
   Per-read alignments, feature coverage, PID metrics.
+
+---
+
+## Citation
+
+An application note describing `AssemblyDesigner` is in preparation; citation details will be added here once it is published. Until then, please cite this repository directly, ideally referencing the specific release/version tag you used.
