@@ -136,3 +136,9 @@ examples/01 Liquid Handling/Combinational PCR/Opentrons_Flex_Protocol_PCR_design
 examples/01 Liquid Handling/Golden Gate Cloning/3G_Example/Opentrons_Flex_Protocol_MoClo_assembly_designer.py
 examples/01 Liquid Handling/Golden Gate Cloning/Basic_Example/Opentrons_Flex_Protocol_MoClo_assembly_designer.py
 examples/01 Liquid Handling/Golden Gate Cloning/High_Throughput_Example/Opentrons_Flex_Protocol_MoClo_assembly_designer.py
+
+### Regenerated example reports with overly long filenames (break Windows path length limit on clone) ###
+examples/02 insilico Plasmid Construction/04 Gibson Cloning/01 3G Gibson/reports/3G/C1__pEVmC_K_AE__P45_AB_A_RBS_01_BC_A_E0030_CD_TrrnB_DE_A_UNS1A_UNS3_E__P69_AB_A_RBS_01_BC_A_E0040m_CD_TrrnB_DE_-9bcca45a.gb
+examples/02 insilico Plasmid Construction/04 Gibson Cloning/01 3G Gibson/reports/3G/C2__pEVmC_K_AE__P69_AB_A_RBS_01_BC_A_E0030_CD_TrrnB_DE_A_UNS1A_UNS3_E__P45_AB_A_RBS_01_BC_A_E0040m_CD_TrrnB_DE_-c4c7d068.gb
+examples/02 insilico Plasmid Construction/03 PCR/01 Example/reports/3G/C1__pEVmC_K_AE__P45_AB_A_RBS_01_BC_A_E0030_CD_TrrnB_DE_A_UNS1A_UNS3_E__P69_AB_A_RBS_01_BC_A_E0040m_CD_TrrnB_DE_-9bcca45a.gb
+examples/02 insilico Plasmid Construction/03 PCR/01 Example/reports/3G/C2__pEVmC_K_AE__P69_AB_A_RBS_01_BC_A_E0030_CD_TrrnB_DE_A_UNS1A_UNS3_E__P45_AB_A_RBS_01_BC_A_E0040m_CD_TrrnB_DE_-c4c7d068.gb
