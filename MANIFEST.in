@@ -13,7 +13,6 @@ prune build
 prune dist
 prune tests
 prune .github
-prune .gitlab
 prune .idea
 
 # drop junk & large artifacts anywhere in the tree

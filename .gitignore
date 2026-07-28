@@ -2,6 +2,9 @@
 # Python + Visual Studio Code + Project specific ignores
 # =========================================================
 
+# Standalone assembly_designer package repo (separate git project, own history)
+/assembly_designer/
+
 ### Python ###
 __pycache__/
 *.py[cod]

@@ -54,6 +54,7 @@ dev = [
   "ruff>=0.5",
   "mypy>=1.10",
   "pre-commit>=3.6",
+  "build>=1.2",
   "twine>=5.0",
 ]
 
@@ -107,8 +108,10 @@ assembly-designer = "assembly_designer.workflow:main"
 
 # ---------------- Project URLs ----------------
 [project.urls]
-Homepage   = "https://jugit.fz-juelich.de/IBG-1/juelich-biofoundry/autobiotech/assembly_designer"
-Repository = "https://jugit.fz-juelich.de/IBG-1/juelich-biofoundry/autobiotech/assembly_designer"
+Homepage   = "https://github.com/JuBiotech/AssemblyDesigner"
+Repository = "https://github.com/JuBiotech/AssemblyDesigner"
+Issues     = "https://github.com/JuBiotech/AssemblyDesigner/issues"
+Documentation = "https://github.com/JuBiotech/AssemblyDesigner#readme"
 
 # ---------------- setuptools Configuration ----------------
 [tool.setuptools]
