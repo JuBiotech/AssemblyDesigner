@@ -502,6 +502,15 @@ def organize_assembly_reports(
         with zipfile.ZipFile(zpath) as zf:
             members = [m for m in zf.infolist() if not m.is_dir()]
 
+            # DNAcauldron writes an error.csv into the report when the simulated
+            # assembly did not produce the expected construct(s). In that case none
+            # of the GenBank files in the zip is an assembled product - they are
+            # just the input parts - so they must never be used as a stand-in for
+            # a successful construct.
+            has_error_report = any(
+                Path(m.filename).name.lower() == "error.csv" for m in members
+            )
+
             candidates: list[zipfile.ZipInfo] = []
             if final_only:
                 # Assembly name = ZIP stem without trailing "_report"
@@ -524,8 +533,10 @@ def organize_assembly_reports(
                         and m.filename.lower().endswith((".gb", ".gbk"))
                     ]
 
-                # 3) Last resort: first GenBank file (keeps output to one per ZIP)
-                if not candidates:
+                # 3) Last resort: first GenBank file (keeps output to one per ZIP).
+                # Skipped when the assembly failed, since the first GenBank file in
+                # a failed-assembly zip is just an input part, not a construct.
+                if not candidates and not has_error_report:
                     for m in members:
                         if m.filename.lower().endswith((".gb", ".gbk")):
                             candidates = [m]
@@ -536,7 +547,14 @@ def organize_assembly_reports(
                 ]
 
             if not candidates:
-                LOGGER.warning("No GenBank candidates in %s", zpath.name)
+                if has_error_report:
+                    LOGGER.warning(
+                        "Assembly failed for %s (see error.csv in the report); "
+                        "skipping extraction",
+                        zpath.name,
+                    )
+                else:
+                    LOGGER.warning("No GenBank candidates in %s", zpath.name)
                 if delete_zip:
                     zpath.unlink(missing_ok=True)
                 continue
