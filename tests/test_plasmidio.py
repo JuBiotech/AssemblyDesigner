@@ -349,6 +349,63 @@ def test_delete_all_zip_files(
     assert not z1.exists() and not z2.exists()
 
 
+def _make_report_zip(zip_path: Path, *, files: dict[str, bytes]) -> Path:
+    zip_path.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(zip_path, "w") as zf:
+        for name, content in files.items():
+            zf.writestr(name, content)
+    return zip_path
+
+
+def test_organize_assembly_reports_skips_failed_assembly(tmp_path: Path) -> None:
+    """A failed DNAcauldron assembly writes error.csv and no assembled construct.
+
+    organize_assembly_reports() must not fall back to an input part (e.g. the
+    bare backbone) and save it under the assembly's name, since that would make
+    a failed assembly look like it succeeded. Regression test for the bug where
+    Golden Gate combinations with an incompatible backbone still produced a
+    "constructed" GenBank file in reports/Assembly.
+    """
+    report_dir = tmp_path / "reports"
+    _make_report_zip(
+        report_dir / "asmA_report.zip",
+        files={
+            "provided_parts_records/backbone.gb": b"LOCUS backbone\n//\n",
+            "error.csv": (
+                "assembly_name;message;suggestion;data\n"
+                "asmA;Wrong number of constructs;expected_: 1,found: 0\n"
+            ).encode(),
+        },
+    )
+
+    extracted = organize_assembly_reports(report_dir, delete_zip=False)
+
+    assert extracted == []
+    assert not (report_dir / "Assembly" / "asmA.gb").exists()
+
+
+def test_organize_assembly_reports_extracts_successful_assembly(
+    tmp_path: Path,
+) -> None:
+    """Sanity check: a zip with a real construct is unaffected by the error.csv
+    guard and still extracts the exact-match GenBank file."""
+    report_dir = tmp_path / "reports"
+    _make_report_zip(
+        report_dir / "asmB_report.zip",
+        files={
+            "asmB.gb": b"LOCUS asmB construct\n//\n",
+            "provided_parts_records/backbone.gb": b"LOCUS backbone\n//\n",
+        },
+    )
+
+    extracted = organize_assembly_reports(report_dir, delete_zip=False)
+
+    assert [p.name for p in extracted] == ["asmB.gb"]
+    assert (
+        report_dir / "Assembly" / "asmB.gb"
+    ).read_bytes() == b"LOCUS asmB construct\n//\n"
+
+
 # =========================
 # Additional tests
 # =========================
