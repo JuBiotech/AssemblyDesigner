@@ -157,6 +157,11 @@ def generate_assembly_reports(
 
         # 6) Write report ZIP
         zip_path = out_dir / f"{assembly_name}_report.zip"
+        # DNAcauldron/flametree opens an existing target in append mode; a stale
+        # or truncated leftover from an earlier interrupted run (0 bytes, locked
+        # by antivirus/cloud sync, ...) makes that raise BadZipFile. Always start
+        # from a clean file instead of relying on append semantics.
+        zip_path.unlink(missing_ok=True)
         sim.write_report(str(zip_path))
         LOGGER.info("Wrote report: %s", zip_path.name)
 
@@ -418,6 +423,9 @@ def generate_recipe_assemblies(
         simulation = assembly.simulate(sequence_repository=repository)
 
         zip_path = out_dir / f"{assembly_name}_report.zip"
+        # See the comment in generate_assembly_reports: never append onto a
+        # stale/corrupt leftover ZIP from an earlier run.
+        zip_path.unlink(missing_ok=True)
         simulation.write_report(str(zip_path))
         LOGGER.info("Wrote report: %s", zip_path)
 

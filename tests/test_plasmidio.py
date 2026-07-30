@@ -336,6 +336,61 @@ def test_run_all_functions_wrapper(
     assert outputs and all(p.exists() for p in outputs)
 
 
+def test_generate_assembly_reports_overwrites_stale_zip(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    """Regression test for a stale/corrupt leftover ``*_report.zip`` (e.g. from an
+    earlier interrupted run, or truncated by antivirus/cloud sync while being
+    written) at the target report path.
+
+    DNAcauldron's report writer (via flametree) opens an *existing* target zip in
+    append mode, which raises ``BadZipFile`` if that file isn't a valid zip.
+    generate_assembly_reports must remove any pre-existing file at the target path
+    before writing, rather than leaving the writer to append onto it.
+    """
+
+    class _AppendModeDummySim(_DummySim):
+        def write_report(self, out_path: str) -> None:
+            if Path(out_path).exists():
+                raise zipfile.BadZipFile("File is not a zip file")
+            super().write_report(out_path)
+
+    class _AppendModeDummyAssembly(_DummyAssembly):
+        def simulate(self, sequence_repository: Any) -> _AppendModeDummySim:
+            return _AppendModeDummySim(
+                Path(f"{self._name}_report.zip"), self._gb_payload
+            )
+
+    class _AppendModeDummyDC(_DummyDC):
+        def _factory(self, parts: list[str], name: str) -> _AppendModeDummyAssembly:
+            payload = _mk_record("ATGCATGCATGC", rid=name, rname=name)
+            return _AppendModeDummyAssembly(parts, name, payload)
+
+    cat1 = tmp_path / "C1"
+    cat2 = tmp_path / "C2"
+    cat1.mkdir()
+    cat2.mkdir()
+    _write_minimal_gb(cat1, "A")
+    _write_minimal_gb(cat2, "B")
+
+    out_dir = tmp_path / "reports"
+    out_dir.mkdir()
+    # Leftover from an earlier interrupted run: present, but not a valid zip.
+    (out_dir / "A_B_report.zip").write_bytes(b"")
+
+    monkeypatch.setattr(assembly_mod, "dc", _AppendModeDummyDC(), raising=True)
+    results = generate_assembly_reports(
+        category_dirs={"C1": cat1, "C2": cat2},
+        category_order=["C1", "C2"],
+        output_dir=out_dir,
+    )
+
+    assert len(results) == 1
+    zip_path, _parts = results[0]
+    assert zip_path.exists()
+    assert zip_path.stat().st_size > 0
+
+
 def test_delete_all_zip_files(
     tmp_path: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
