@@ -1,0 +1,184 @@
+LOCUS       DVA-CE-EYFP        2819 bp DNA     circular SYN 22-SEP-2023
+DEFINITION  DVA-DE-EYFP rotated to position 2700.
+ACCESSION   .
+VERSION     .
+KEYWORDS    DVA-CE-EYFP
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2819)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Mar 26, 2024 from SnapGene 6.2.1
+            https://www.snapgene.com
+COMMENT     Vector molecule:  EYFP
+               Fragment ends: BbsI
+               Fragment size: 719
+            Insert molecule:  DVA-DE
+               Fragment ends: BbsI
+               Fragment size: 2104
+FEATURES             Location/Qualifiers
+     source          1..2819
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     misc_feature    125..128
+                     /label=C
+     CDS             126..839
+                     /codon_start=1
+                     /label=EYFP
+                     /translation="MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLK
+                     FICTTGKLPVPWPTLVTTFGYGLQCFARYPDHMKQHDFFKSAMPEGYVQERTIFFKDDG
+                     NYKTRAEVKFEGDTLVNRIELKGINFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKV
+                     NFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSYQSALSKDPNEKRDHMVLLE
+                     FVTAAGITLGMDELYK"
+     primer_bind     127..156
+                     /label=OSM339
+                     /note="pK18-Ptac-eyfp_F"
+     primer_bind     127..152
+                     /label=OSM159
+                     /note="L19_PAGFP_F"
+     primer_bind     127..151
+                     /label=OSM157
+                     /note="S2_PAGFP_F"
+     primer_bind     127..151
+                     /label=OSM320
+                     /note="cI-eyfp_F"
+     primer_bind     127..149
+                     /label=OSM232
+                     /note="leaderless_eyfp_F"
+     primer_bind     127..146
+                     /label=OSM236
+                     /note="Leaderless_EYFP_F"
+     primer_bind     127..146
+                     /label=OSM239
+                     /note="Leadered_EYFP_F"
+     primer_bind     127..146
+                     /label=OSM269
+                     /note="linker_eyfp_F"
+     primer_bind     127..144
+                     /label=OSM024
+                     /note="eYFP_F"
+     primer_bind     127..143
+                     /label=OSM608
+                     /note="EYFP-D-F"
+     primer_bind     127..141
+                     /label=OSM265
+                     /note="leadered_eyfp_F"
+     primer_bind     127..141
+                     /label=OSM287
+                     /note="leaderless_eyfp_2_F"
+     primer_bind     127..141
+                     /label=OSM300
+                     /note="leaderless_eyfp_3_F"
+     primer_bind     complement(184..203)
+                     /label=OSM290
+                     /note="seq_pMKEx2_eyfp_R"
+     primer_bind     complement(189..208)
+                     /label=OSM291
+                     /note="seq_pJC1-venus"
+     primer_bind     complement(818..842)
+                     /label=OSM360
+                     /note="DOWN_eyfp_new"
+     primer_bind     complement(819..844)
+                     /label=OSM609
+                     /note="EYFP-E-R"
+     primer_bind     complement(820..842)
+                     /label=OSM237
+                     /note="EYFP_R"
+     primer_bind     complement(820..839)
+                     /label=OSM348
+                     /note="tga_R"
+     primer_bind     complement(820..839)
+                     /label=OSM350
+                     /note="tag_R"
+     primer_bind     complement(821..842)
+                     /label=OSM352
+                     /note="plus 1_R"
+     primer_bind     complement(821..839)
+                     /label=OSM023
+                     /note="PA-mCherry_R"
+     primer_bind     complement(821..839)
+                     /label=OSM072
+                     /note="L19_DN_PAmC_R"
+     primer_bind     complement(821..839)
+                     /label=OSM084
+                     /note="S2_DN_PAmC_R"
+     primer_bind     complement(821..839)
+                     /label=OSM354
+                     /note="minus 1_R"
+     misc_feature    840..843
+                     /label=E
+     misc_feature    join(844..2819,1..124)
+                     /label=DVLA
+                     /note="/ApEinfo_fwdcolor=#6ecff6"
+                     /note="/ApEinfo_revcolor=#6ecff6"
+     primer_bind     1001..1022
+                     /label=OSM134
+                     /note="PolyClon_del1_F"
+     primer_bind     1001..1018
+                     /label=OSM041
+                     /note="del1pCLTON_F"
+     primer_bind     complement(1030..1047)
+                     /label=pTETO3_seq
+                     /note="pTETO3_seq"
+     CDS             complement(1807..2667)
+                     /label=bla
+                     /note="/ApEinfo_fwdcolor=#faac61"
+                     /note="/ApEinfo_revcolor=#faac61"
+     primer_bind     complement(1924..1970)
+                     /label=OSM394
+                     /note="pMKEx2-noBsaI2159_R"
+     primer_bind     1924..1970
+                     /label=OSM395
+                     /note="pMKEx2-noBsaI2159_F"
+     primer_bind     2788..2807
+                     /label=OSM466
+                     /note="DVA_Seq"
+ORIGIN
+        1 tcatgacatt aacctataaa aataggcgta tcacgaggca gaatttcaga taaaaaaaat
+       61 ccttagcttt cgctaaggat gatttctgga attcgcggcc gcttctagag actagtgggt
+      121 ctcaaatgag caagggcgag gagctgttca ccggggtggt gcccatcctg gtcgagctgg
+      181 acggcgacgt aaacggccac aagttcagcg tgtccggcga gggcgagggc gatgccacct
+      241 acggcaagct gaccctgaag ttcatctgca ccaccggcaa gctgcccgtg ccctggccca
+      301 ccctcgtgac caccttcggc tacggcctgc agtgcttcgc ccgctacccc gaccacatga
+      361 agcagcacga cttcttcaag tccgccatgc ccgaaggcta cgtccaggag cgcaccatct
+      421 tcttcaagga cgacggcaac tacaagaccc gcgccgaggt gaagttcgag ggcgacaccc
+      481 tggtgaaccg catcgagctg aagggcatca acttcaagga ggacggcaac atcctggggc
+      541 acaagctgga gtacaactac aacagccaca acgtctatat catggccgac aagcagaaga
+      601 acggcatcaa ggtgaacttc aagatccgcc acaacatcga ggacggcagc gtgcagctcg
+      661 ccgaccacta ccagcagaac acccccatcg gcgacggccc cgtgctgctg cccgacaacc
+      721 actacctgag ctaccagtcc gccctgagca aagaccccaa cgagaagcgc gatcacatgg
+      781 tcctgctgga gttcgtgacc gccgccggga tcactctcgg catggacgag ctgtacaagg
+      841 cttagagacc tactagtagc ggccgctgca ggcttcctcg ctcactgact cgctgcgctc
+      901 ggtcgttcgg ctgcggcgag cggtatcagc tcactcaaag gcggtaatac ggttatccac
+      961 agaatcaggg gataacgcag gaaagaacat gtgagcaaaa ggccagcaaa aggccaggaa
+     1021 ccgtaaaaag gccgcgttgc tggcgttttt ccacaggctc cgcccccctg acgagcatca
+     1081 caaaaatcga cgctcaagtc agaggtggcg aaacccgaca ggactataaa gataccaggc
+     1141 gtttccccct ggaagctccc tcgtgcgctc tcctgttccg accctgccgc ttaccggata
+     1201 cctgtccgcc tttctccctt cgggaagcgt ggcgctttct catagctcac gctgtaggta
+     1261 tctcagttcg gtgtaggtcg ttcgctccaa gctgggctgt gtgcacgaac cccccgttca
+     1321 gcccgaccgc tgcgccttat ccggtaacta tcgtcttgag tccaacccgg taagacacga
+     1381 cttatcgcca ctggcagcag ccactggtaa caggattagc agagcgaggt atgtaggcgg
+     1441 tgctacagag ttcttgaagt ggtggcctaa ctacggctac actagaagaa cagtatttgg
+     1501 tatctgcgct ctgctgaagc cagttacctt cggaaaaaga gttggtagct cttgatccgg
+     1561 caaacaaacc accgctggta gcggtggttt ttttgtttgc aagcagcaga ttacgcgcag
+     1621 aaaaaaagga tctcaagaag atcctttgat cttttctacg gggtctgacg ctcagtggaa
+     1681 cgaaaactca cgttaaggga ttttggtcat gagattatca aaaaggatct tcacctagat
+     1741 ccttttaaat taaaaatgaa gttttaaatc aatctaaagt atatatgagt aaacttggtc
+     1801 tgacagttac caatgcttaa tcagtgaggc acctatctca gcgatctgtc tatttcgttc
+     1861 atccatagtt gcctgactcc ccgtcgtgta gataactacg atacgggagg gcttaccatc
+     1921 tggccccagt gctgcaatga taccgcgcga cccacgctca ccggctccag atttatcagc
+     1981 aataaaccag ccagccggaa gggccgagcg cagaagtggt cctgcaactt tatccgcctc
+     2041 catccagtct attaattgtt gccgggaagc tagagtaagt agttcgccag ttaatagttt
+     2101 gcgcaacgtt gttgccattg ctacaggcat cgtggtgtca cgctcgtcgt ttggtatggc
+     2161 ttcattcagc tccggttccc aacgatcaag gcgagttaca tgatccccca tgttgtgcaa
+     2221 aaaagcggtt agctccttcg gtcctccgat cgttgtcaga agtaagttgg ccgcagtgtt
+     2281 atcactcatg gttatggcag cactgcataa ttctcttact gtcatgccat ccgtaagatg
+     2341 cttttctgtg actggtgagt actcaaccaa gtcattctga gaatagtgta tgcggcgacc
+     2401 gagttgctct tgcccggcgt caatacggga taataccgcg ccacatagca gaactttaaa
+     2461 agtgctcatc attggaaaac gttcttcggg gcgaaaactc tcaaggatct taccgctgtt
+     2521 gagatccagt tcgatgtaac ccactcgtgc acccaactga tcttcagcat cttttacttt
+     2581 caccagcgtt tctgggtgag caaaaacagg aaggcaaaat gccgcaaaaa agggaataag
+     2641 ggcgacacgg aaatgttgaa tactcatact cttccttttt caatattatt gaagcattta
+     2701 tcagggttat tgtctcatga gcggatacat atttgaatgt atttagaaaa ataaacaaat
+     2761 aggggttccg cgcacatttc cccgaaaagt gccacctgac gtctaagaaa ccattatta
+//

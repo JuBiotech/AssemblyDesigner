@@ -1,0 +1,84 @@
+LOCUS       DVA-DE-EYFP        2823 bp DNA     circular SYN 14-JUN-2023
+DEFINITION  Ligation of DVA-DE into EYFP.
+ACCESSION   .
+VERSION     .
+KEYWORDS    DVA-DE-EYFP
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2823)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Mar 26, 2024 from SnapGene 6.2.1
+            https://www.snapgene.com
+COMMENT     Vector molecule:  EYFP
+               Fragment ends: BbsI
+               Fragment size: 719
+            Insert molecule:  DVA-DE
+               Fragment ends: BbsI
+               Fragment size: 2104
+FEATURES             Location/Qualifiers
+     source          1..2823
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     misc_feature    1..4
+                     /label=D
+     misc_feature    6..719
+                     /label=EYFP
+     misc_feature    724..2823
+                     /label=DVLA
+                     /note="/ApEinfo_fwdcolor=#6ecff6"
+                     /note="/ApEinfo_revcolor=#6ecff6"
+     CDS             complement(1687..2547)
+                     /label=bla
+                     /note="/ApEinfo_fwdcolor=#faac61"
+                     /note="/ApEinfo_revcolor=#faac61"
+ORIGIN
+        1 aggtggtgag caagggcgag gagctgttca ccggggtggt gcccatcctg gtcgagctgg
+       61 acggcgacgt aaacggccac aagttcagcg tgtccggcga gggcgagggc gatgccacct
+      121 acggcaagct gaccctgaag ttcatctgca ccaccggcaa gctgcccgtg ccctggccca
+      181 ccctcgtgac caccttcggc tacggcctgc agtgcttcgc ccgctacccc gaccacatga
+      241 agcagcacga cttcttcaag tccgccatgc ccgaaggcta cgtccaggag cgcaccatct
+      301 tcttcaagga cgacggcaac tacaagaccc gcgccgaggt gaagttcgag ggcgacaccc
+      361 tggtgaaccg catcgagctg aagggcatca acttcaagga ggacggcaac atcctggggc
+      421 acaagctgga gtacaactac aacagccaca acgtctatat catggccgac aagcagaaga
+      481 acggcatcaa ggtgaacttc aagatccgcc acaacatcga ggacggcagc gtgcagctcg
+      541 ccgaccacta ccagcagaac acccccatcg gcgacggccc cgtgctgctg cccgacaacc
+      601 actacctgag ctaccagtcc gccctgagca aagaccccaa cgagaagcgc gatcacatgg
+      661 tcctgctgga gttcgtgacc gccgccggga tcactctcgg catggacgag ctgtacaagg
+      721 cttagagacc tactagtagc ggccgctgca ggcttcctcg ctcactgact cgctgcgctc
+      781 ggtcgttcgg ctgcggcgag cggtatcagc tcactcaaag gcggtaatac ggttatccac
+      841 agaatcaggg gataacgcag gaaagaacat gtgagcaaaa ggccagcaaa aggccaggaa
+      901 ccgtaaaaag gccgcgttgc tggcgttttt ccacaggctc cgcccccctg acgagcatca
+      961 caaaaatcga cgctcaagtc agaggtggcg aaacccgaca ggactataaa gataccaggc
+     1021 gtttccccct ggaagctccc tcgtgcgctc tcctgttccg accctgccgc ttaccggata
+     1081 cctgtccgcc tttctccctt cgggaagcgt ggcgctttct catagctcac gctgtaggta
+     1141 tctcagttcg gtgtaggtcg ttcgctccaa gctgggctgt gtgcacgaac cccccgttca
+     1201 gcccgaccgc tgcgccttat ccggtaacta tcgtcttgag tccaacccgg taagacacga
+     1261 cttatcgcca ctggcagcag ccactggtaa caggattagc agagcgaggt atgtaggcgg
+     1321 tgctacagag ttcttgaagt ggtggcctaa ctacggctac actagaagaa cagtatttgg
+     1381 tatctgcgct ctgctgaagc cagttacctt cggaaaaaga gttggtagct cttgatccgg
+     1441 caaacaaacc accgctggta gcggtggttt ttttgtttgc aagcagcaga ttacgcgcag
+     1501 aaaaaaagga tctcaagaag atcctttgat cttttctacg gggtctgacg ctcagtggaa
+     1561 cgaaaactca cgttaaggga ttttggtcat gagattatca aaaaggatct tcacctagat
+     1621 ccttttaaat taaaaatgaa gttttaaatc aatctaaagt atatatgagt aaacttggtc
+     1681 tgacagttac caatgcttaa tcagtgaggc acctatctca gcgatctgtc tatttcgttc
+     1741 atccatagtt gcctgactcc ccgtcgtgta gataactacg atacgggagg gcttaccatc
+     1801 tggccccagt gctgcaatga taccgcgcga cccacgctca ccggctccag atttatcagc
+     1861 aataaaccag ccagccggaa gggccgagcg cagaagtggt cctgcaactt tatccgcctc
+     1921 catccagtct attaattgtt gccgggaagc tagagtaagt agttcgccag ttaatagttt
+     1981 gcgcaacgtt gttgccattg ctacaggcat cgtggtgtca cgctcgtcgt ttggtatggc
+     2041 ttcattcagc tccggttccc aacgatcaag gcgagttaca tgatccccca tgttgtgcaa
+     2101 aaaagcggtt agctccttcg gtcctccgat cgttgtcaga agtaagttgg ccgcagtgtt
+     2161 atcactcatg gttatggcag cactgcataa ttctcttact gtcatgccat ccgtaagatg
+     2221 cttttctgtg actggtgagt actcaaccaa gtcattctga gaatagtgta tgcggcgacc
+     2281 gagttgctct tgcccggcgt caatacggga taataccgcg ccacatagca gaactttaaa
+     2341 agtgctcatc attggaaaac gttcttcggg gcgaaaactc tcaaggatct taccgctgtt
+     2401 gagatccagt tcgatgtaac ccactcgtgc acccaactga tcttcagcat cttttacttt
+     2461 caccagcgtt tctgggtgag caaaaacagg aaggcaaaat gccgcaaaaa agggaataag
+     2521 ggcgacacgg aaatgttgaa tactcatact cttccttttt caatattatt gaagcattta
+     2581 tcagggttat tgtctcatga gcggatacat atttgaatgt atttagaaaa ataaacaaat
+     2641 aggggttccg cgcacatttc cccgaaaagt gccacctgac gtctaagaaa ccattattat
+     2701 catgacatta acctataaaa ataggcgtat cacgaggcag aatttcagat aaaaaaaatc
+     2761 cttagctttc gctaaggatg atttctggaa ttcgcggccg cttctagaga ctagtgggtc
+     2821 tca
+//
