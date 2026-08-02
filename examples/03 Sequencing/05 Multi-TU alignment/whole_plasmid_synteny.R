@@ -7,15 +7,24 @@
 # needed, since blocks split naturally at the assembly's arbitrary
 # linearization point instead of forcing one continuous alignment path.
 #
-# Usage: Rscript whole_plasmid_synteny.R <design.fasta> <assembly.fasta> <output.csv>
+# Usage: Rscript whole_plasmid_synteny.R <design.fasta> <assembly.fasta> <output.csv> [blocks_dir]
+#
+# The optional <blocks_dir>: for each syntenic block found, writes a 2-record
+# FASTA (block_<i>.fasta, with the design and assembly sequence for that
+# block, gaps removed, already correctly extracted/oriented by AlignSynteny)
+# -- lets a caller re-align/visualize an individual block at a sane scale
+# without needing to reverse-engineer FindSynteny's raw block coordinate
+# system (its start/end columns are NOT plain 0/1-based offsets into the
+# original sequences -- don't try to slice with them directly).
 
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) != 3) {
-  stop("Usage: Rscript whole_plasmid_synteny.R <design.fasta> <assembly.fasta> <output.csv>")
+if (length(args) < 3) {
+  stop("Usage: Rscript whole_plasmid_synteny.R <design.fasta> <assembly.fasta> <output.csv> [blocks_dir]")
 }
 design_fa <- args[1]
 assembly_fa <- args[2]
 out_csv <- args[3]
+blocks_dir <- if (length(args) >= 4) args[4] else NA
 
 # BiocManager::install() defaults to a per-user library when the R installation's
 # own library (under Program Files) isn't writable -- make sure that's on the search path.
@@ -39,6 +48,19 @@ coverage <- 1 - as.numeric(as.dist(syn))[1]
 aligned <- AlignSynteny(syn, dbConn, verbose = FALSE)
 pair_key <- grep("design", names(aligned), value = TRUE)[1]
 blocks_aln <- aligned[[pair_key]]
+
+if (!is.na(blocks_dir)) {
+  dir.create(blocks_dir, showWarnings = FALSE, recursive = TRUE)
+  for (i in seq_along(blocks_aln)) {
+    design_seq <- gsub("-", "", as.character(blocks_aln[[i]][1]))
+    assembly_seq <- gsub("-", "", as.character(blocks_aln[[i]][2]))
+    out_fa <- file.path(blocks_dir, paste0("block_", i, ".fasta"))
+    writeLines(c(
+      paste0(">design_block", i), design_seq,
+      paste0(">assembly_block", i), assembly_seq
+    ), out_fa)
+  }
+}
 
 total_len <- 0
 total_match <- 0
