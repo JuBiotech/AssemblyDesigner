@@ -2058,6 +2058,32 @@ def _autosize_columns(df: pd.DataFrame, worksheet, workbook_engine: str) -> None
             worksheet.column_dimensions[get_column_letter(i)].width = float(w)
 
 
+def _freeze_header_row(worksheet, workbook_engine: str) -> None:
+    """Freeze the header row (row 1) across Excel engines.
+
+    xlsxwriter exposes ``freeze_panes`` as a method; openpyxl exposes it as a
+    plain attribute holding a cell reference, so calling it like a function
+    raises ``TypeError: 'NoneType' object is not callable`` on machines where
+    only openpyxl (not xlsxwriter) is installed.
+    """
+    if workbook_engine == "xlsxwriter":
+        worksheet.freeze_panes(1, 0)
+    else:
+        worksheet.freeze_panes = "A2"
+
+
+def _apply_autofilter(worksheet, workbook_engine: str, n_rows: int, n_cols: int) -> None:
+    """Add an autofilter over the header + data range across Excel engines."""
+    if workbook_engine == "xlsxwriter":
+        worksheet.autofilter(0, 0, max(1, n_rows), max(0, n_cols - 1))
+    else:
+        from openpyxl.utils import get_column_letter
+
+        last_col = get_column_letter(max(1, n_cols))
+        last_row = max(2, n_rows + 1)  # +1 for the 1-indexed header row
+        worksheet.auto_filter.ref = f"A1:{last_col}{last_row}"
+
+
 def export_results(
     rows: Sequence[ResultRow],
     out_path: str,
@@ -2162,9 +2188,9 @@ def export_results(
                     worksheet.set_column(j, j, None, wrap_fmt)
 
         # Freeze header
-        worksheet.freeze_panes(1, 0)
+        _freeze_header_row(worksheet, engine)
         # Auto filter
-        worksheet.autofilter(0, 0, max(1, len(df)), max(0, len(df.columns) - 1))
+        _apply_autofilter(worksheet, engine, len(df), len(df.columns))
 
         # Autosize columns (best-effort)
         _autosize_columns(df, worksheet, engine)
@@ -2229,5 +2255,5 @@ def export_feature_inventory(
         inv_df.to_excel(xw, sheet_name=sheet_name, index=False)
         ws = xw.sheets[sheet_name]
         _autosize_columns(inv_df, ws, engine)
-        ws.freeze_panes(1, 0)
+        _freeze_header_row(ws, engine)
     return os.path.abspath(final)
