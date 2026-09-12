@@ -366,6 +366,12 @@ def generate_recipe_assemblies(
     # 2) Resolve each design and run a DNA Cauldron simulation.
     results: list[tuple[Path, list[str]]] = []
     aliases = dict(category_aliases or {})
+    # Designs that resolve to the exact same part combination (e.g. the same TU
+    # reused across several constructs) are simulated only once: re-running
+    # DNAcauldron and overwriting the same *_report.zip a second time is not
+    # only wasted work, it can also fail on Windows with a PermissionError
+    # because the OS may still hold the just-written ZIP's file handle open.
+    built: dict[tuple[str, ...], Path] = {}
 
     dc = _load_dnacauldron()
 
@@ -411,6 +417,18 @@ def generate_recipe_assemblies(
                 )
             resolved.append(match)
 
+        # Reuse the ZIP from an earlier, identical design instead of
+        # re-simulating (and re-overwriting the same file) for a duplicate.
+        cache_key = tuple(resolved)
+        if cache_key in built:
+            LOGGER.info(
+                "Design #%d: identical to a previous design, reusing %s",
+                idx,
+                built[cache_key].name,
+            )
+            results.append((built[cache_key], resolved))
+            continue
+
         # Build a small repository of the selected parts.
         repo_parts: dict[str, SeqRecord] = {
             stem: catalogs[cat][stem]
@@ -429,6 +447,7 @@ def generate_recipe_assemblies(
         simulation.write_report(str(zip_path))
         LOGGER.info("Wrote report: %s", zip_path)
 
+        built[cache_key] = zip_path
         results.append((zip_path, resolved))
 
     return results

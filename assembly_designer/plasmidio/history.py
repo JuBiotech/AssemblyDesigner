@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import re
-import statistics
 from collections.abc import Iterable, Mapping, MutableMapping
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -650,12 +649,14 @@ class AssemblyHistory:
 
     def plot(
         self,
-        figsize: tuple[float, float] = (12.0, 7.0),
+        figsize: Optional[tuple[float, float]] = None,
         seed: int = 42,
         layout: str = "grouped",  # "grouped" | "grid" | "dot" | "spring"
         x_gap: float = 3.0,
         y_gap: float = 1.6,
         curve: float = 0.12,
+        node_font_size: int = 8,
+        edge_font_size: int = 7,
         save_path: Optional[Path] = None,
         show: bool = True,
     ) -> Figure:
@@ -663,8 +664,13 @@ class AssemblyHistory:
 
         Parameters
         ----------
-        figsize : tuple of float, optional
-            Matplotlib figure size (width, height) in inches. Default is ``(12.0, 7.0)``.
+        figsize : tuple of float or None, optional
+            Matplotlib figure size (width, height) in inches. If ``None``
+            (default), the size is computed from the number of rows/columns
+            in the layout so that labels stay legible as the number of TUs
+            grows (a 4-TU construct gets a taller figure than a 2-TU one,
+            rather than squeezing the same labels into the same box). Pass an
+            explicit tuple to override.
         seed : int, optional
             Random seed used by the spring layout. Ignored by other layouts.
         layout : {"grouped", "grid", "dot", "spring"}, optional
@@ -683,6 +689,10 @@ class AssemblyHistory:
             Vertical spacing between nodes within a column. Default ``1.6``.
         curve : float, optional
             Edge curvature (rad) to reduce label collisions. Default ``0.12``.
+        node_font_size : int, optional
+            Font size for node labels. Default ``8``.
+        edge_font_size : int, optional
+            Font size for edge labels. Default ``7``.
         save_path : pathlib.Path or None, optional
             If given, the figure is saved **before** display to avoid blank/white PNGs
             on some backends. Saved with ``dpi=160`` and ``bbox_inches='tight'``.
@@ -799,10 +809,16 @@ class AssemblyHistory:
             placed_pcrs = set(gg_to_pcr.values())
             orphan_pcrs = [p for p in pcr_nodes if p not in placed_pcrs]
             if orphan_pcrs:
-                gg_pcr_ys = [pos[p][1] for p in placed_pcrs if p in pos]
+                # Always place below *every* already-placed node, never at the
+                # median of the TU-PCR rows: with an odd number of TUs the
+                # median lands exactly on a TU row, and even measured against
+                # the lowest TU's own GG/PCR row (rather than its full source
+                # spread) the backbone can still clip that TU's bottom-most
+                # source node.
+                placed_ys = [p[1] for p in pos.values()]
                 target_y = (
-                    statistics.median(gg_pcr_ys)
-                    if gg_pcr_ys
+                    min(placed_ys) - 1.5 * y_gap
+                    if placed_ys
                     else (y_cursor - 1.0 * y_gap)
                 )
                 for p in orphan_pcrs:
@@ -849,6 +865,21 @@ class AssemblyHistory:
         else:
             pos = _grid_positions()
 
+        # Auto-size the figure from the actual layout extent so that node/edge
+        # labels stay a legible, roughly constant size on the page regardless
+        # of how many TUs the construct has, instead of squeezing a growing
+        # number of rows into a fixed-size box until text overlaps.
+        if figsize is None:
+            xs = [p[0] for p in pos.values()]
+            ys = [p[1] for p in pos.values()]
+            x_span = (max(xs) - min(xs)) if xs else 0.0
+            y_span = (max(ys) - min(ys)) if ys else 0.0
+            n_cols = (x_span / x_gap) + 1 if x_gap > 0 else 1
+            n_rows = (y_span / y_gap) + 1 if y_gap > 0 else 1
+            width = max(10.0, n_cols * 3.0 + 1.0)
+            height = max(6.0, n_rows * 0.5 + 1.5)
+            figsize = (width, height)
+
         # Draw
         kind_colors = {
             "Source": "#bdbdbd",
@@ -879,14 +910,14 @@ class AssemblyHistory:
             G,
             pos,
             labels=labels,
-            font_size=8,
+            font_size=node_font_size,
             bbox=dict(boxstyle="round,pad=0.25", fc="white", ec="none", alpha=0.8),
         )
         nx.draw_networkx_edge_labels(
             G,
             pos,
             edge_labels=edge_labels,
-            font_size=7,
+            font_size=edge_font_size,
             rotate=False,
             bbox=dict(boxstyle="round,pad=0.15", fc="white", ec="none", alpha=0.7),
         )
@@ -1092,7 +1123,6 @@ def build_histories_for_all_constructs(
             # show equals `plot`; if just saving in batch, set show=False
             hist.plot(
                 layout="grouped",
-                figsize=(12.0, 7.0),
                 x_gap=3.2,
                 y_gap=1.7,
                 curve=0.12,
